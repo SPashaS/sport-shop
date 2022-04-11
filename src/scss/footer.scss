@@ -210,7 +210,7 @@
 .vk-footer {
     display: flex;
     gap: rem(30);
-    height: 100%;
+    height: rem(235);
     @media (max-width:$pc){
         display: none; 
     }

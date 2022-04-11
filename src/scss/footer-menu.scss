@@ -1,0 +1,88 @@
+
+.footer-menu {
+    border-top: 3px dashed #dadada;
+    border-bottom: 3px dashed #dadada;
+    // .footer-menu__container
+
+    &__container {
+    }
+
+    // .footer-menu__body
+
+    &__body {
+        padding: rem(10) 0;
+        display: flex;
+        
+        @media (min-width:$mobile){
+            display: inline-block;
+        }
+    }
+
+    // .footer-menu__row
+    &__row {
+        display: flex;
+        padding: rem(15);
+        @media (max-width:$mobile){
+            flex: 0 1 50%;
+            flex-direction: column;
+            align-items: start;
+        }
+        @media (min-width:$mobile){
+            &:not(:last-child) {
+                border-bottom: 1px solid #efefef;
+            }
+            align-items: center;
+        }
+    }
+
+    // .footer-menu__label
+
+    &__label {
+        font-weight: 900;
+        letter-spacing: 0.35px;
+        @media (max-width:$mobile){
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+        @media (min-width:$mobile){
+            &:not(:last-child) {
+                margin-right: rem(30);
+            }
+        }
+    }
+
+    // .footer-menu__list
+    &__list {
+        display: flex;
+        @media (max-width:$mobile){
+            flex-direction: column;
+        }
+    }
+
+    // .footer-menu__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+        @media (min-width:$mobile) {
+            &:not(:last-child) {
+                margin-right: rem(30);
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // .footer-menu__link
+    &__link {
+        color: $accentColor;
+        font-size: rem(12);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: #333333;
+            }
+        }
+    }
+}

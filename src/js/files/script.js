@@ -15,5 +15,5 @@ function contactsInit() {
 contactsInit();
 
 
-VK.Widgets.Group("vk_groups1", {mode: 0, width: "100%", height: "400"}, 1);
-VK.Widgets.Group("vk_groups2", {mode: 0, width: "100%", height: "400"}, 1);
+VK.Widgets.Group("vk_groups1", {mode: 0, width: "270px", height: "235"}, 1);
+VK.Widgets.Group("vk_groups2", {mode: 0, width: "270px", height: "235"}, 1);
