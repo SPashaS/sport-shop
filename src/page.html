@@ -1,14 +1,247 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Пустая страница"
+	"title":"Главная страница"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<div class="page__container">
+					<div class="page__aside">
+						<div class="page__menu menu-page">
+							<div class="menu-page__header">
+								<div class="menu-page__label">Каталог товаров</div>
+								<div class="menu-page__burger">
+									<div class="menu-page__burger-icon">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<nav class="menu-page__body">
+								<ul class="menu-page__list">
+									<li class="menu-page__item menu-page__item_parent">
+										<a href="#" class="menu-page__link _icon-arrows">Беговые дорожки</a>
+										<div class="menu-page__submenu submenu-page">
+											<div class="submenu-page__body">
+												<ul class="submenu-page__list">
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Всепогодный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Для помещений</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Профессиональный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Любительский</a>
+													</li>
+												</ul>
+												<div class="submenu-page__product-card">
+													<div class="product-card">
+														<div class="product-card__labels">
+															<div class="product-card__label">Товар дня</div>
+														</div>
+														<a href="#" class="product-card__image">
+															<img src="@img/products/02.jpg" alt="Беговые дорожка">
+														</a>
+														<div class="product-card__body">
+															<a href="#" class="product-card__title"> Беговая дорожка BH Fitness F1 G6414V</a>
+															<div class="product-card__footer">
+																<div class="product-card__price product-card__price_old _icon-rub">71 990</div>
+																<a href="#" class="product-card__add _icon-basket"></a>
+																<div class="product-card__price _icon-rub">64 990</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="menu-page__item menu-page__item_parent">
+										<a href="#" class="menu-page__link _icon-arrows">Эллиптические тренажеры</a>
+										<div class="menu-page__submenu submenu-page">
+											<div class="submenu-page__body">
+												<ul class="submenu-page__list">
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Всепогодный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Для помещений</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Профессиональный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Любительский</a>
+													</li>
+												</ul>
+												<div class="submenu-page__product-card">
+													<div class="product-card">
+														<div class="product-card__labels">
+															<!-- <div class="product-card__label">Товар дня</div> -->
+														</div>
+														<a href="#" class="product-card__image">
+															<img src="@img/products/01.jpg" alt="Домашний теннисный стол">
+														</a>
+														<div class="product-card__body">
+															<a href="#" class="product-card__title">
+																Домашний теннисный стол Donic Indoor Roller 800 Green
+															</a>
+															<div class="product-card__footer">
+																<div class="product-card__price product-card__price_old _icon-rub">71 990</div>
+																<a href="#" class="product-card__add _icon-basket"></a>
+																<div class="product-card__price _icon-rub">64 990</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Велотренажеры</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Гребные тренажеры</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Вибромассажеры</a></li>
+									<li class="menu-page__item menu-page__item_parent">
+										<a href="#" class="menu-page__link _icon-arrows">Теннисные столы</a>
+										<div class="menu-page__submenu submenu-page">
+											<div class="submenu-page__body">
+												<ul class="submenu-page__list">
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Всепогодный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Для помещений</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Профессиональный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Любительский</a>
+													</li>
+												</ul>
+												<div class="submenu-page__product-card">
+													<div class="product-card">
+														<div class="product-card__labels">
+															<div class="product-card__label">Товар дня</div>
+														</div>
+														<a href="#" class="product-card__image">
+															<img src="@img/products/02.jpg" alt="Беговые дорожка">
+														</a>
+														<div class="product-card__body">
+															<a href="#" class="product-card__title">BH Fitness F1 G6414V
+																Беговая дорожка
+															</a>
+															<div class="product-card__footer">
+																<div class="product-card__price product-card__price_old _icon-rub">71 990</div>
+																<a href="#" class="product-card__add _icon-basket"></a>
+																<div class="product-card__price _icon-rub">64 990</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Баскетбол</a></li>
+									<li class="menu-page__item menu-page__item_parent">
+										<a href="#" class="menu-page__link _icon-arrows">Массажные кресла</a>
+										<div class="menu-page__submenu submenu-page">
+											<div class="submenu-page__body">
+												<ul class="submenu-page__list">
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Для помещений</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Профессиональный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Любительский</a>
+													</li>
+												</ul>
+												<div class="submenu-page__product-card">
+													<div class="product-card">
+														<div class="product-card__labels">
+															<div class="product-card__label">Товар дня</div>
+														</div>
+														<a href="#" class="product-card__image">
+															<img src="@img/products/02.jpg" alt="Беговые дорожка">
+														</a>
+														<div class="product-card__body">
+															<a href="#" class="product-card__title">BH Fitness F1 G6414V
+																Беговая дорожка
+															</a>
+															<div class="product-card__footer">
+																<div class="product-card__price product-card__price_old _icon-rub">71 990</div>
+																<a href="#" class="product-card__add _icon-basket"></a>
+																<div class="product-card__price _icon-rub">64 990</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="menu-page__item menu-page__item_parent">
+										<a href="#" class="menu-page__link _icon-arrows">Массажные столы</a>
+										<div class="menu-page__submenu submenu-page">
+											<div class="submenu-page__body">
+												<ul class="submenu-page__list">
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Всепогодный</a>
+													</li>
+													<li class="submenu-page__item">
+														<a href="#" class="submenu-page__link">Для помещений</a>
+													</li>
+												</ul>
+												<div class="submenu-page__product-card">
+													<div class="product-card">
+														<div class="product-card__labels">
+															<div class="product-card__label">Товар дня</div>
+														</div>
+														<a href="#" class="product-card__image">
+															<img src="@img/products/02.jpg" alt="Беговые дорожка">
+														</a>
+														<div class="product-card__body">
+															<a href="#" class="product-card__title">BH Fitness F1 G6414V
+																Беговая дорожка
+																Домашний теннисный стол Donic Indoor Roller 800 Green
+															</a>
+															<div class="product-card__footer">
+																<div class="product-card__price product-card__price_old _icon-rub">71 990</div>
+																<a href="#" class="product-card__add _icon-basket"></a>
+																<div class="product-card__price _icon-rub">64 990</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Силовые тренажеры</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Батуты</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Детские городки</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Дачная мебель</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Уличные спортивные комплексы</a></li>
+									<li class="menu-page__item"><a href="#" class="menu-page__link">Аксессуары</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="page__content">
+						контент
+					</div>
+				</div>
+
+
+
+
+
+
+				@@include('html/_footer-menu.htm',{})
 			</main>
-			@@include('html/_footer-menu.htm',{})
+			
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
