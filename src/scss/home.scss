@@ -388,6 +388,17 @@
             font-weight: 300;
             color: #666666;
             letter-spacing: 0.7px;
+            &:last-child {
+                display: none;
+            }
+        }
+        &._categories {
+            span {
+                display: none;
+                &:last-child {
+                    display: block;
+                }
+            }
         }
         &._active {
             &::after {
