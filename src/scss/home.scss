@@ -25,6 +25,10 @@
         &__footer-menu {
             @include adaptiveValue("margin-bottom",40,20);
         }
+
+    // .page__search
+    &__search {
+    }
 }
 //====================================================================================================
 .menu-page {
@@ -352,6 +356,123 @@
 }
 
 //====================================================================================================
+.search-page {
+    display: flex;
+    // align-items: center;
+    position: relative;
+    // .search-page__select
+    &__select {
+    }
+    // .search-page___value
+    &__value {
+        display: flex;
+        gap: rem(12);
+        align-items: center;
+        background-color: #f2f2f2;
+        height: rem(39);
+        padding: 0 rem(13);
+        cursor: pointer;
+        &::before{
+            font-size: rem(17);
+            
+        }
+        &::after {
+            content: "\e900";
+            @extend %ic;
+            transform: rotate(90deg);
+            font-size: rem(10);
+            transition: transform 0.3s ease 0s;
+        }
+        span {
+            border-bottom: 1px dashed;
+            font-weight: 300;
+            color: #666666;
+            letter-spacing: 0.7px;
+        }
+        &._active {
+            &::after {
+                transform: rotate(-90deg);
+            }
+            & + .categories-search-page {
+                display: block;
+            }
+        }
+    }
+    // .search-page__categories
+    &__categories {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    // .search-page__input
+    &__input {
+        flex: 1 1 auto;
+        border-top: rem(2) solid #f2f2f2;
+        border-bottom: rem(2) solid #f2f2f2;
+        input {
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 0 rem(20);
+            outline: 0;
+        }
+    }
+
+    // .search-page__button
+    &__button {
+    }
+}
+//====================================================================================================
+.categories-search-page {
+    display: none;
+    background-color: #fff;
+    border-bottom: rem(4) solid $orangeColor;
+    width: 100%;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    // .categories-search-page__row
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .categories-search-page__column
+    &__column {
+        flex: 0 1 33.333%;
+        &:not(:last-child) {
+            border-right: 1px solid #f3f3f3;
+        }
+    }
+
+    // .categories-search-page__list
+    &__list {
+        padding: rem(30) rem(40);
+        
+        li {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
+    // .categories-search-page__checkbox
+    &__checkbox {
+        .checkbox__label {
+            color: $grayColorText;
+            cursor: pointer;
+            
+        }
+        .checkbox__input {
+            display: none;
+            &:checked + .checkbox__label {
+                color: $orangeColor;
+            }
+        }
+        
+    }
+}
+
 
 //====================================================================================================
 

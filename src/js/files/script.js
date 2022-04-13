@@ -40,4 +40,15 @@ function subMenuInit() {
 		})
 	}
 }
-subMenuInit()
+subMenuInit();
+
+
+
+function searchSelect() {
+	let searchValue = document.querySelector('.search-page__value');
+	// let categoriesSearch = document.querySelector('.categories-search-page');
+	searchValue.addEventListener("click", function (e) {
+		searchValue.classList.toggle('_active');
+	});
+}
+searchSelect();
