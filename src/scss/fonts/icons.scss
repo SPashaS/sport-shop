@@ -8,6 +8,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 [class*="_icon-"] {
 	&:before {
 		@extend %ic;
@@ -29,4 +30,8 @@
 
 ._icon-search:before {
 	content: "\e903";
+}
+
+._icon-quote:before {
+	content: "\e904";
 }

@@ -1,31 +1,38 @@
 //====================================================================================================
 
 .page {
-		// .page__container
-		&__container {
-            display: flex;
-		}
+	// .page__container
+	&__container {
+        display: flex;
+	}
 
-		// .page__aside
-		&__aside {
-            flex: 0 0 rem(261);
-		}
+	// .page__aside
+	&__aside {
+        flex: 0 0 rem(261);
+	}
 
-		// .page__menu
-		&__menu {
-		}
+	// .page__menu
+	&__menu {
+        margin-bottom: rem(45);
+	}
+    // .page__news-aside
+    &__news-aside {
+        margin-bottom: rem(75);
+    }
+    // .page__reviews-aside
+    &__reviews-aside {
+    }
+	// .page__content
+	&__content {
+        flex: 1 1 auto;
+        margin-left: rem(32);
+        min-width: 0;
+	}
 
-		// .page__content
-		&__content {
-            flex: 1 1 auto;
-            margin-left: rem(32);
-            min-width: 0;
-		}
-
-        // .page__footer-menu
-        &__footer-menu {
-            @include adaptiveValue("margin-bottom",40,20);
-        }
+    // .page__footer-menu
+    &__footer-menu {
+        @include adaptiveValue("margin-bottom",40,20);
+    }
 
     // .page__search
     &__search {
@@ -33,10 +40,11 @@
     }
 
     // .page__main-slider
-
     &__main-slider {
         margin-bottom: rem(65);
     }
+
+    
 }
 //====================================================================================================
 .menu-page {
@@ -685,7 +693,158 @@
 
 //====================================================================================================
 
+.news-aside {
+
+    // .news-aside__title
+    &__title {
+        margin-bottom: rem(35);
+    }
+
+    // .news-aside__items
+
+    &__items {
+    }
+
+    // .news-aside__item
+
+    &__item {
+    }
+}
+.item-news-aside {
+    &:not(:last-child) {
+        margin-bottom: rem(47);
+    }
+    // .item-news-aside__title
+
+    &__title {
+        font-size: rem(12);
+        font-weight: 900;
+        line-height: 1.5;
+        color: #333;
+        text-transform: uppercase;
+        margin-bottom: rem(22);
+        display: inline-block;
+        @media (any-hover: hover){
+            &:hover{
+                color: $orangeColor;
+            }
+        }
+    }
+
+    // .item-news-aside__body
+    &__body {
+        display: flex;
+    }
+
+    // .item-news-aside__time
+    &__time {
+        flex: 0 0 rem(45);
+        font-size: rem(18);
+        font-weight: 300;
+        color: #d8d8d8;
+        padding-right: rem(5);
+        span {
+            display: block;
+            font-weight: 900;
+            font-size: rem(24);
+        }
+    }
+
+    // .item-news-aside__text
+    &__text {
+        flex: 1 1 auto;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+}
+
 //====================================================================================================
+
+.reviews-aside {
+
+    // .reviews-aside__title
+    &__title {
+        margin-bottom: rem(30);
+    }
+
+    // .reviews-aside__items
+
+    &__items {
+        
+    }
+
+    // .reviews-aside__item
+    &__item {
+        margin-bottom: rem(40);
+        display: block;
+    }
+}
+
+.item-reviews-aside {
+    @media (any-hover: hover){
+        &:hover {
+            .item-reviews-aside__content {
+                background-color: $accentColor;
+                color: #fff;
+                &::before {
+                    color: #64deee;
+                }
+            }
+            .item-reviews-aside__name {
+                color: $accentColor;
+            }
+            .item-reviews-aside__date {
+                color: $accentColor;
+            }
+        }
+    }
+    // .item-reviews-aside__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rem(26);
+        
+    }
+
+    // .item-reviews-aside__name
+    &__name {
+        font-size: rem(12);
+        font-weight: 900;
+        line-height: 1.5;
+        color: #333;
+        text-transform: uppercase;
+        transition: color 0.3s ease 0s;
+    }
+
+    // .item-reviews-aside__date
+    &__date {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #999;
+        transition: color 0.3s ease 0s;
+    }
+
+    // .item-reviews-aside__content
+    &__content {
+        font-size: rem(12);
+        font-weight: 300;
+        line-height: 1.5;
+        color: #666;
+        display: flex;
+        padding: rem(8) rem(14);
+        transition: all 0.3s ease 0s;
+
+        &::before{
+            flex: 0 0 rem(32);
+            font-size: rem(16);
+            color: #dadada;
+            transition: color 0.3s ease 0s;
+        }
+    }
+}
 
 //====================================================================================================
 
