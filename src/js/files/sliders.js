@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -45,11 +45,12 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.swiper')) {
-		new Swiper('.swiper', {
+	if (document.querySelector('.main-slider__slider')) {
+		new Swiper('.main-slider__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			//modules: [Navigation, Pagination],
+			modules: [Pagination],
 			/*
 			effect: 'fade',
 			autoplay: {
@@ -61,7 +62,7 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -69,15 +70,15 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
-			// Arrows
-			navigation: {
-				nextEl: '.about__more .more__item_next',
-				prevEl: '.about__more .more__item_prev',
+			pagination: {
+				el: '.main-slider__dotts',
+				clickable: true,
 			},
+			// Arrows
+			// navigation: {
+			// 	nextEl: '.about__more .more__item_next',
+			// 	prevEl: '.about__more .more__item_prev',
+			// },
 			/*
 			breakpoints: {
 				320: {
@@ -103,7 +104,18 @@ function initSliders() {
 
 			}
 		});
+		let mainSliderImages = document.querySelectorAll('.main-slider__image-ibg');
+		let mainSliderDotts = document.querySelectorAll('.main-slider__dotts .swiper-pagination-bullet');
+
+		for (let index = 0; index < mainSliderImages.length; index++) {
+			const mainSliderImage = mainSliderImages[index].querySelector('img').getAttribute('src');
+			
+			mainSliderDotts[index].style.backgroundImage = "url('" + mainSliderImage + "')";
+			
+		}
 	}
+
+
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

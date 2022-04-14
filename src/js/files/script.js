@@ -65,6 +65,5 @@ subMenuInit();
 			} else {
 				searchValue.classList.remove('_categories');
 			}
-
 		})
 	}
