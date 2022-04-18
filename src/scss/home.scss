@@ -44,7 +44,9 @@
         margin-bottom: rem(65);
     }
 
-    
+    // .page__products-slider
+    &__products-slider {
+    }
 }
 //====================================================================================================
 .menu-page {
@@ -265,112 +267,7 @@
             padding: 0 rem(9);
 		}
 }
-//====================================================================================================
-.product-card {
-    position: relative;
-    // .product-card__labels
-	&__labels {
-        position: absolute;
-        top: rem(11);
-        left: rem(11);
-	}
-	// .product-card__label
-	&__label {
-        font-weight: 600;
-        background-color: $orangeColor;
-        text-transform: uppercase;
-        color: #fff;
-        height: rem(21);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 rem(15);
-        border-radius: rem(11);
-        &:not(:last-child) {
-            margin-bottom: rem(10);
-        }
-	}
 
-	// .product-card__image
-	&__image {
-        height: rem(195);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: rem(10) 0;
-        img {
-            max-width: 100%;
-            max-height: rem(175);
-        }
-	}
-
-    // .product-card__body
-    &__body {
-        padding: 0 rem(25) rem(15);
-    }
-	// .product-card__title
-	&__title {
-        color: $accentColorText;
-        display: block;
-        font-size: rem(16);
-        margin-bottom: rem(13);
-        line-height: math.div(24,16);
-        @media (any-hover: hover){
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-	}
-
-	// .product-card__footer
-	&__footer {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-	}
-
-	// .product-card__add
-	&__add {
-        width: rem(40);
-        height: rem(40);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #e6e6e6;
-        border-radius: 50%;
-        &::before{
-            font-size: rem(23);
-            color: #fff;
-        }
-	}
-
-	// .product-card__price
-	&__price {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        gap: rem(5);
-        font-size: rem(24);
-        font-weight: 900;
-        &::before{
-            font-size: rem(14);
-        }
-
-        &_old  {
-            text-align: right;
-            text-decoration: line-through;
-            flex: 1 1 100%;
-            font-size: rem(18);
-            font-weight: 300;
-            color: $grayColorText;
-            &::before{
-                font-size: rem(12);
-            }
-    
-        }
-	}
-}
 
 //====================================================================================================
 .search-page {
@@ -805,7 +702,6 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: rem(26);
-        
     }
 
     // .item-reviews-aside__name
@@ -848,6 +744,61 @@
 
 //====================================================================================================
 
+.products-slider {
+
+    // .products-slider__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .products-slider__title
+
+    &__title {
+        margin-bottom: rem(31);
+    }
+
+    // .products-slider__control
+    &__control {
+        display: flex;
+        gap: rem(25);
+    }
+
+    // .products-slider__arrow
+    &__arrow {
+        // .products-slider__arrow_prev
+        &_prev {
+        }
+        // .products-slider__arrow_next
+        &_next {
+        }
+    }
+
+    // .products-slider__navigation
+    &__navigation {
+    }
+
+    // .products-slider__slider
+
+    &__slider {
+    }
+
+    // .products-slider__swiper
+    &__swiper {
+    }
+
+    // .products-slider__slide
+
+    &__slide {
+    }
+
+    // .products-slider__items
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(260), 1fr));
+        gap: rem(30);
+    }
+}
 //====================================================================================================
 
 //====================================================================================================
