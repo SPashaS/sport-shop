@@ -4,6 +4,7 @@
 	// .page__container
 	&__container {
         display: flex;
+        padding-bottom: rem(50);
 	}
 
 	// .page__aside
@@ -46,6 +47,10 @@
 
     // .page__products-slider
     &__products-slider {
+    }
+
+    // .page__brands
+    &__brands {
     }
 }
 //====================================================================================================
@@ -800,8 +805,79 @@
     }
 }
 //====================================================================================================
+.brands {
+    border-top: 3px dashed #dadada;
+    border-bottom: 3px dashed #dadada;
+    padding: rem(23) 0;
+    margin-bottom: rem(32);
+    // .brands__container
+    &__container {
+    }
+
+    // .brands__body
+	&__body {
+        padding: 0 rem(40);
+        position: relative;
+	}
+
+    // .brands__slider
+    &__slider {
+        display: flex;
+    }
+
+    // .brands__control
+	&__control {
+	}
+
+	&__slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+		// .brands__slider-arrow_prev
+		&_prev {
+            left: 0;
+		}
+
+        &_next {
+            right: 0;
+        }
+	}
+
+    // .brands__swiper
+
+    &__swiper {
+        align-items: center;
+    }
+
+    // .brands__slide
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .brands__link
+    &__link {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+
+    // .brands__image
+    &__image {
+        width: 100%;
+        padding: 0 rem(10);
+    }
+}
 
 //====================================================================================================
+
+
+
 
 //====================================================================================================
 

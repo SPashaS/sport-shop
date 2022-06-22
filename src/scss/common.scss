@@ -97,7 +97,7 @@
         font-size: rem(16);
         margin-bottom: rem(13);
         line-height: 1.38;
-        transition: transform 0.3s ease 0s;
+        transition: transform 0.9s ease 0s;
         span {
             font-weight: 900;
             display: block;
@@ -115,7 +115,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        transition: transform 0.3s ease 0s;
+        transition: transform 0.9s ease 0s;
         
 	}
 
@@ -284,6 +284,33 @@
     &__value {
         color: $orangeColor;
         font-weight: 900;
+    }
+}
+
+._arrow {
+    &::before{
+        @extend %ic;
+        cursor: pointer;
+        font-size: rem(29);
+        color: #009cb0;
+        transition: all 0.3s ease 0s;
+    }
+    @media (any-hover: hover){
+        &:hover{
+            &::before {
+                color: #fd8424;
+            }
+        }
+    }
+    &_prev {
+        &::before{
+            content: "\e900";
+        }
+    }
+    &_next {
+        &::before{
+            content: "\e901";
+        }
     }
 }
 
