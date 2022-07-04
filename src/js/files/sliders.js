@@ -120,7 +120,7 @@ function initSliders() {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			//modules: [Navigation, Pagination],
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			/*
 			effect: 'fade',
 			autoplay: {
@@ -140,10 +140,10 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			// pagination: {
-			// 	el: '.main-slider__dotts',
-			// 	clickable: true,
-			// },
+			pagination: {
+				el: '.products-slider__navigation',
+				type: 'fraction'
+			},
 			// Arrows
 			navigation: {
 				nextEl: '.products-slider__arrow_next',
