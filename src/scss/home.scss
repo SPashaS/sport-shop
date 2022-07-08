@@ -4,11 +4,11 @@
 
     // .page__container
     &__container {
-        @media (max-width:$mobile) {
+        @media (max-width:$tablet) {
             padding-top: rem(15);
         }
 
-        @media (min-width:$mobile) {
+        @media (min-width:$tablet) {
             display: flex;
             padding-bottom: rem(50);
         }
@@ -28,6 +28,12 @@
         }
 
     }
+    // .page__content-aside
+	&__content-aside {
+        @media (max-width:$tablet){
+            margin: rem(30) 0;
+        }
+	}
 
     // .page__news-aside
     &__news-aside {
@@ -45,7 +51,7 @@
     &__content {
         min-width: 0;
 
-        @media (min-width:$mobile) {
+        @media (min-width:$tablet) {
             flex: 1 1 auto;
             margin-left: rem(32);
         }
@@ -63,7 +69,11 @@
 
     // .page__main-slider
     &__main-slider {
-        margin-bottom: rem(65);
+        margin: 0 rem(-15) rem(30);
+        @media (min-width:$mobile){
+            margin: 0 0 rem(65) 0;
+        }
+        
     }
 
     // .page__products-slider
@@ -81,9 +91,8 @@
 .menu-page {
     background: url('@img/menu-bg.jpg') #068292;
     position: relative;
-    // background-color: #14c0d4;
+    z-index: 11111;
     // .menu-page__header
-
     &__header {
         display: flex;
         justify-content: space-between;
@@ -264,8 +273,7 @@
 
 //====================================================================================================
 .submenu-page {
-
-    @media (min-width:$mobile) {
+    @media (min-width:$tablet) {
         position: absolute;
         z-index: 10;
         overflow: hidden;
@@ -275,12 +283,15 @@
         top: 0;
         left: 100%;
         transition: transform 0.3s ease 0s;
+        ._active-sub & {
+            overflow: visible;
+            pointer-events: auto;
+        }
     }
 
     // .submenu-page__body
     &__body {
         background-color: #fff;
-
         width: 100%;
         height: 100%;
         position: absolute;
@@ -288,11 +299,11 @@
         left: 0;
         transition: transform 0.3s ease 0s;
 
-        @media (max-width:$mobile) {
+        @media (max-width:$tablet) {
             overflow: hidden;
             pointer-events: none;
             opacity: 0;
-            transition: all 0.3s ease 0s;
+            // transition: all 0.3s ease 0s;
 
             ._active-sub & {
                 position: relative;
@@ -302,14 +313,15 @@
             }
         }
 
-        @media (min-width:$mobile) {
+        @media (min-width:$tablet) {
             transform: translate(-100%, 0);
             border: rem(2) solid #098494;
+            ._active-sub & {
+                transform: translate(0, 0);
+            }
         }
 
-        ._active-sub & {
-            transform: translate(0, 0);
-        }
+        
     }
 
     // .submenu-page__list
@@ -347,7 +359,7 @@
     &__product-card {
         display: none;
 
-        @media (min-width:$mobile) {
+        @media (min-width:$tablet) {
             display: block;
             padding: 0 rem(9);
 
@@ -529,17 +541,19 @@
         position: relative;
         z-index: 2;
         padding: rem(21) rem(36) rem(58);
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: percent(417, 771);
-            height: 100%;
-            background-image: linear-gradient(to right, #e1e1e1, rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0));
-            background-size: cover;
+        @media (min-width:$tablet){
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: percent(417, 771);
+                height: 100%;
+                background-image: linear-gradient(to right, #e1e1e1, rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0));
+                background-size: cover;
+            }
         }
+        
 
     }
 
@@ -562,50 +576,62 @@
     &__dotts {
         position: relative;
         z-index: 2;
-        margin-top: rem(-27.5);
+        margin-top: rem(15);
         display: flex;
         justify-content: center;
         counter-reset: item;
-
+        @media (min-width:$tablet){
+            margin-top: rem(-27.5);
+        }
         .swiper-pagination-bullet {
-            width: rem(55);
-            height: rem(55);
-            margin: 0 rem(22.5);
             border-radius: 50%;
-            border: rem(2) solid #fff;
-            position: relative;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
-            &::after {
-                opacity: 0;
-                transition: all 0.3s ease 0s;
-                counter-increment: item;
-                content: counter(item);
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $orangeColor;
-                font-size: rem(16);
-                font-weight: 900;
-                color: #fffefe;
+            width: rem(11);
+            height: rem(11);
+            margin: 0 rem(5);
+            border: rem(6) solid $grayColorText;
+            @media (min-width:$tablet){
+                width: rem(55);
+                height: rem(55);
+                margin: 0 rem(22.5);
+                border: rem(2) solid #fff;
+                position: relative;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+    
+                &::after {
+                    opacity: 0;
+                    transition: all 0.3s ease 0s;
+                    counter-increment: item;
+                    content: counter(item);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $orangeColor;
+                    font-size: rem(16);
+                    font-weight: 900;
+                    color: #fffefe;
+                }
             }
+            
 
         }
 
         .swiper-pagination-bullet-active {
-            border: rem(4) solid #fff;
-
-            &::after {
-                opacity: 1;
+            border: rem(6) solid $accentColor;
+                &::after {
+                    opacity: 1;
+                }
+            @media (min-width:$tablet){
+                border: rem(4) solid #fff;
             }
+            
 
         }
     }
@@ -615,7 +641,7 @@
 
     // .content-main-slider__title
     &__title {
-        font-size: rem(48);
+        @include adaptiveValue("font-size",48,33);
         font-weight: 900;
         line-height: 0.9;
         color: #333;
@@ -895,13 +921,21 @@
     // .products-slider__header
     &__header {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: rem(15);
+        margin-bottom: rem(20); 
+        @media (min-width:$mobile){
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: rem(31); 
+        }
+        
     }
 
     // .products-slider__title
 
     &__title {
-        margin-bottom: rem(31);
+        
     }
 
     // .products-slider__control

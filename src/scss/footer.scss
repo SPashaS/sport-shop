@@ -184,7 +184,9 @@
         flex-wrap: wrap;
         align-items: center;
         margin-left: rem(-5);
+        justify-content: center;
         @media (min-width:$mobile){
+            justify-content: start;
             margin-left: rem(-15);
         }
     }
