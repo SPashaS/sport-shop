@@ -91,7 +91,6 @@
 .menu-page {
     background: url('@img/menu-bg.jpg') #068292;
     position: relative;
-    z-index: 11111;
     // .menu-page__header
     &__header {
         display: flex;
@@ -180,7 +179,8 @@
     }
 
     // .menu-page__list
-    &__list {}
+    &__list {
+    }
 
     // .menu-page__item
     &__item {
@@ -202,11 +202,6 @@
                 position: relative;
 
                 &::before {
-                    // content:'';
-                    // background-image: url('@img/icons/menu-page-arrow.png');
-                    // background-size: cover;
-                    // width: rem(14);
-                    // height: rem(14);
                     display: block;
                     position: absolute;
                     right: 0;
@@ -259,12 +254,6 @@
                 }
             }
         }
-
-        // @media (any-hover: hover) {
-        //     &:hover {
-        //         background-color: #098494;
-        //     }
-        // }
     }
 
     // .menu-page__submenu
@@ -275,7 +264,7 @@
 .submenu-page {
     @media (min-width:$tablet) {
         position: absolute;
-        z-index: 10;
+        z-index: 9;
         overflow: hidden;
         pointer-events: none;
         width: 100%;
@@ -297,13 +286,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        transition: transform 0.3s ease 0s;
+        // transition: transform 0.3s ease 0s;
 
         @media (max-width:$tablet) {
             overflow: hidden;
             pointer-events: none;
             opacity: 0;
-            // transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
 
             ._active-sub & {
                 position: relative;
